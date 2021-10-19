@@ -1,6 +1,6 @@
 package attributes;
 
-public enum Skill {
+public enum Skill implements Attribute {
     ACROBATICS(Ability.DEXTERITY),
     ANIMAL_HANDLING(Ability.WISDOM),
     ARCANA(Ability.INTELLIGENCE),
@@ -39,5 +39,7 @@ public enum Skill {
         return string.substring(0,3);
     }
 
-
+    public String getID() {
+        return "SKILL." + super.toString();
+    }
 }

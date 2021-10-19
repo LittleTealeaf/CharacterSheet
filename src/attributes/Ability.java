@@ -18,8 +18,11 @@ public enum Ability {
         return string.substring(0,3);
     }
 
-
     public static int getModifier(int score) {
         return (score - 10) / 2;
+    }
+
+    public String getID() {
+        return "ABILITY." + super.toString();
     }
 }
