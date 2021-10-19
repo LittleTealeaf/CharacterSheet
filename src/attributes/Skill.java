@@ -1,6 +1,6 @@
 package attributes;
 
-public enum Skill implements Attributable {
+public enum Skill {
     ACROBATICS(Ability.DEXTERITY),
     ANIMAL_HANDLING(Ability.WISDOM),
     ARCANA(Ability.INTELLIGENCE),

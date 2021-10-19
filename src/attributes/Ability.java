@@ -1,6 +1,6 @@
 package attributes;
 
-public enum Ability implements Attributable {
+public enum Ability {
     STRENGTH,DEXTERITY,CONSTITUTION,INTELLIGENCE,WISDOM,CHARISMA;
 
     String string;
