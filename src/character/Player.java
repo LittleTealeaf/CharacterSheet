@@ -2,10 +2,7 @@ package character;
 
 import attributeBonus.Bonus;
 import attributeBonus.BonusContainer;
-import attributes.Ability;
-import attributes.Attribute;
-import attributes.Misc;
-import attributes.Skill;
+import attributes.*;
 import playerClass.PlayerClass;
 
 import java.util.*;
@@ -14,6 +11,7 @@ public class Player implements BonusContainer {
 
     private Inventory inventory;
     private Set<Skill> skillProficiencies;
+//    MAKE A "PROFICIENCY" INTERFACE THAT ALLOWS FOR ALL PROFICIENCIES TO BE IN ONE SET, WITH A "GETNAME" AND A "CATEGORY"
     private List<Bonus> playerBonuses;
     private List<PlayerClass> classes;
 
@@ -79,5 +77,4 @@ public class Player implements BonusContainer {
             map.put(attribute,map.getOrDefault(attribute,0) + bonus.getValue());
         }
     }
-
 }
