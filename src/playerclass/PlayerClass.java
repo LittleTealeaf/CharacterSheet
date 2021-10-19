@@ -1,5 +1,0 @@
-package playerclass;
-
-public enum PlayerClass {
-    BARBARIAN,BARD,CLERIC,DRUID,WARLOCK,WIZARD,RANGER,FIGHTER, SORCERER, MONK,ROGUE,PALADIN;
-}
