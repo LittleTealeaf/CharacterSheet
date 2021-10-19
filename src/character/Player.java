@@ -6,6 +6,7 @@ import attributes.Ability;
 import attributes.Attribute;
 import attributes.Misc;
 import attributes.Skill;
+import playerClass.PlayerClass;
 
 import java.util.*;
 
@@ -14,6 +15,7 @@ public class Player implements BonusContainer {
     private Inventory inventory;
     private Set<Skill> skillProficiencies;
     private List<Bonus> playerBonuses;
+    private List<PlayerClass> classes;
 
     private transient Map<Attribute,Integer> bonuses;
 
@@ -22,10 +24,15 @@ public class Player implements BonusContainer {
         skillProficiencies = new HashSet<>();
         bonuses = new HashMap<>();
         playerBonuses = new ArrayList<>();
+        classes = new ArrayList<>();
     }
 
     public int getTotalLevel() {
-        return 5;
+        int total = 0;
+        for(PlayerClass cl : classes) {
+            total += cl.getLevel();
+        }
+        return total;
     }
 
     public int getProficiencyBonus() {
