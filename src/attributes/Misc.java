@@ -1,12 +1,11 @@
 package attributes;
 
-public enum Ability implements Attribute {
-    STRENGTH,DEXTERITY,CONSTITUTION,INTELLIGENCE,WISDOM,CHARISMA;
-
+public enum Misc implements Attribute {
+    ARMOR_CLASS,INITIATIVE,MAX_DEX_BONUS;
     private String string;
 
-    Ability() {
-        this.string = super.toString().charAt(0) + super.toString().substring(1);
+    Misc() {
+        this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_"," ");
     }
 
 
@@ -23,6 +22,6 @@ public enum Ability implements Attribute {
     }
 
     public String getID() {
-        return "ABILITY." + super.toString();
+        return "MISC." + super.toString();
     }
 }
