@@ -5,6 +5,10 @@ import data.Coin;
 import data.PlayerCharacter;
 import data.Skill;
 
+/**
+ * Import data from http://www.dnd5eapi.co/
+ */
+
 public class App {
 
     public static void main(String... args) {
