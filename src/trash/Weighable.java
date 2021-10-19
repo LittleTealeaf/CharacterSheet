@@ -1,4 +1,4 @@
-package data;
+package trash;
 
 public interface Weighable {
 

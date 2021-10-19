@@ -1,4 +1,4 @@
-package data;
+package trash;
 
 public enum Coin {
     //VALUES ARE IN ASCENDING ORDER

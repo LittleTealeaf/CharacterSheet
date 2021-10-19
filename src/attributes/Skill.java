@@ -1,6 +1,6 @@
-package data;
+package attributes;
 
-public enum Skill {
+public enum Skill implements Attributable {
     ACROBATICS(Ability.DEXTERITY),
     ANIMAL_HANDLING(Ability.WISDOM),
     ARCANA(Ability.INTELLIGENCE),
@@ -38,4 +38,9 @@ public enum Skill {
     public String toShort() {
         return string.substring(0,3);
     }
+
+    public String toID() {
+        return super.toString();
+    }
+
 }

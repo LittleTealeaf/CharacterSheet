@@ -1,8 +1,11 @@
-package data;
+package trash;
+
+import attributes.Ability;
+import attributes.Skill;
 
 import java.util.*;
 
-public class PlayerCharacter {
+public class Player {
 
     private int proficiencyBonus;
     private Set<Skill> skillProficiencies;
@@ -12,7 +15,7 @@ public class PlayerCharacter {
     private final Inventory inventory;
 
 
-    public PlayerCharacter() {
+    public Player() {
         skillProficiencies = new HashSet<>();
         savingThrowProficiencies = new HashSet<>();
         additionalBonuses = new HashMap<>();

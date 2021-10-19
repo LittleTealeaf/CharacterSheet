@@ -1,6 +1,6 @@
-package data;
+package attributes;
 
-public enum Ability {
+public enum Ability implements Attributable {
     STRENGTH,DEXTERITY,CONSTITUTION,INTELLIGENCE,WISDOM,CHARISMA;
 
     String string;
@@ -16,5 +16,13 @@ public enum Ability {
 
     public String toShort() {
         return string.substring(0,3);
+    }
+
+    public String toID() {
+        return super.toString();
+    }
+
+    public static int getModifier(int score) {
+        return (score - 10) / 2;
     }
 }

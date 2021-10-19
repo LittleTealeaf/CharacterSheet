@@ -1,4 +1,4 @@
-package data;
+package trash;
 
 import java.util.ArrayList;
 import java.util.HashMap;

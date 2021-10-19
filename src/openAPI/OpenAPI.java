@@ -1,5 +1,5 @@
 package openAPI;
 
-public class API {
+public class OpenAPI {
 //https://api.open5e.com/
 }

@@ -1,9 +1,7 @@
 package app;
 
-import data.Ability;
-import data.Coin;
-import data.PlayerCharacter;
-import data.Skill;
+import trash.Coin;
+import trash.Player;
 
 /**
  * Import data from http://www.dnd5eapi.co/
@@ -12,7 +10,7 @@ import data.Skill;
 public class App {
 
     public static void main(String... args) {
-        PlayerCharacter character = new PlayerCharacter();
+        Player character = new Player();
         character.getInventory().addCoins(Coin.GOLD,243);
         System.out.println(character.getInventory().getMoneyWeight());
         character.getInventory().balanceMoney();
