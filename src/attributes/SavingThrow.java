@@ -10,6 +10,7 @@ public enum SavingThrow implements Attribute {
 
     private Ability ability;
     private String string;
+
     SavingThrow(Ability ability) {
         this.ability = ability;
         this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_"," ");

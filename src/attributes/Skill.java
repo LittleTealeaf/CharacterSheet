@@ -22,6 +22,7 @@ public enum Skill implements Attribute {
 
     private Ability ability;
     private String string;
+
     Skill(Ability ability) {
         this.ability = ability;
         this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_"," ");
@@ -33,10 +34,6 @@ public enum Skill implements Attribute {
 
     public String toString() {
         return string;
-    }
-
-    public String toShort() {
-        return string.substring(0,3);
     }
 
     public String getID() {

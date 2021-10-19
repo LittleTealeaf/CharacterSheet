@@ -3,7 +3,7 @@ package attributes;
 public enum Ability {
     STRENGTH,DEXTERITY,CONSTITUTION,INTELLIGENCE,WISDOM,CHARISMA;
 
-    String string;
+    private String string;
 
     Ability() {
         this.string = super.toString().charAt(0) + super.toString().substring(1);
