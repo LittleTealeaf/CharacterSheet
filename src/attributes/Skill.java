@@ -24,7 +24,7 @@ public enum Skill implements Attributable {
     private String string;
     Skill(Ability ability) {
         this.ability = ability;
-        this.string = super.toString().charAt(0) + super.toString().substring(1);
+        this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_"," ");
     }
 
     public Ability getAbility() {

@@ -1,22 +1,22 @@
 package items;
 
-import attributes.Attribute;
-import attributes.Attributes;
+import attributes.AttributeBonus;
+import attributes.AttributeBonuses;
 
-public class Item implements Attributes {
+public class Item implements AttributeBonuses {
 
-    protected Attribute[] attributes;
+    protected AttributeBonus[] attributeBonuses;
 
     /**
      * Returns the item's attributes. Only returns if the item either not an equippable, or is an equippable and equipped
      * @return
      */
     @Override
-    public Attribute[] getAttributes() {
-        if(attributes != null && !(this instanceof Equippable) || ((Equippable) this).isEquipped()) {
-            return attributes;
+    public AttributeBonus[] getAttributes() {
+        if(attributeBonuses != null && !(this instanceof Equippable) || ((Equippable) this).isEquipped()) {
+            return attributeBonuses;
         } else {
-            return new Attribute[0];
+            return new AttributeBonus[0];
         }
     }
 

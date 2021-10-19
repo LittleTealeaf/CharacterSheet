@@ -1,16 +1,16 @@
 package attributes;
 
-public class Attribute {
+public class AttributeBonus {
     private String attributeName;
     private int bonusValue;
 
 
-    public Attribute(String attributeName, int bonusValue) {
+    public AttributeBonus(String attributeName, int bonusValue) {
         this.attributeName = attributeName;
         this.bonusValue = bonusValue;
     }
 
-    public Attribute(Attributable attributable, int bonusValue) {
+    public AttributeBonus(Attributable attributable, int bonusValue) {
         this.attributeName = attributable.toID();
         this.bonusValue = bonusValue;
     }
