@@ -39,8 +39,5 @@ public enum Skill {
         return string.substring(0,3);
     }
 
-    public String toID() {
-        return super.toString();
-    }
 
 }

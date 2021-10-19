@@ -18,9 +18,6 @@ public enum Ability {
         return string.substring(0,3);
     }
 
-    public String toID() {
-        return super.toString();
-    }
 
     public static int getModifier(int score) {
         return (score - 10) / 2;

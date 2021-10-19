@@ -1,8 +1,5 @@
 package items;
 
-import attributes.AttributeBonus;
-import attributes.AttributeBonuses;
-
 public class Item implements AttributeBonuses {
 
     protected AttributeBonus[] attributeBonuses;

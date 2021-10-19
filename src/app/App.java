@@ -1,8 +1,5 @@
 package app;
 
-import trash.Coin;
-import trash.Player;
-
 /**
  * Import data from http://www.dnd5eapi.co/
  */
