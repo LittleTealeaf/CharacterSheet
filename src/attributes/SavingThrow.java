@@ -1,6 +1,9 @@
 package attributes;
 
-public enum SavingThrow implements Attribute {
+import structure.Attribute;
+import structure.Proficiency;
+
+public enum SavingThrow implements Attribute, Proficiency {
     STRENGTH(Ability.STRENGTH),
     DEXTERITY(Ability.DEXTERITY),
     CONSTITUTION(Ability.CONSTITUTION),

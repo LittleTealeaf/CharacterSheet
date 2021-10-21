@@ -1,6 +1,9 @@
 package attributes;
 
-public enum Skill implements Attribute {
+import structure.Attribute;
+import structure.Proficiency;
+
+public enum Skill implements Attribute, Proficiency {
     ACROBATICS(Ability.DEXTERITY),
     ANIMAL_HANDLING(Ability.WISDOM),
     ARCANA(Ability.INTELLIGENCE),

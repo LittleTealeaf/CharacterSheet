@@ -1,5 +1,7 @@
 package attributes;
 
+import structure.Attribute;
+
 public enum Ability implements Attribute {
     STRENGTH,DEXTERITY,CONSTITUTION,INTELLIGENCE,WISDOM,CHARISMA;
 

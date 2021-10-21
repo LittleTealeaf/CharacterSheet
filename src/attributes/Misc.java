@@ -1,5 +1,7 @@
 package attributes;
 
+import structure.Attribute;
+
 public enum Misc implements Attribute {
     ARMOR_CLASS,INITIATIVE,MAX_DEX_BONUS;
     private String string;

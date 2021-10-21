@@ -1,6 +1,4 @@
-package attributeBonus;
-
-import attributes.Attribute;
+package structure;
 
 import java.util.Map;
 
