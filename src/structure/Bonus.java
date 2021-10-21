@@ -1,6 +1,8 @@
 package structure;
 
-public class Bonus {
+import java.util.Map;
+
+public class Bonus implements BonusContainer {
     private Attribute attribute;
     private int value;
 
@@ -15,5 +17,10 @@ public class Bonus {
 
     public int getValue() {
         return value;
+    }
+
+    @Override
+    public void addBonuses(Map<Attribute, Integer> map) {
+        map.put(attribute,map.getOrDefault(attribute,0) + value);
     }
 }

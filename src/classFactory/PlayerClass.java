@@ -1,4 +1,4 @@
-package playerClass;
+package classFactory;
 
 import attributes.Skill;
 import structure.BonusContainer;
@@ -7,6 +7,8 @@ import structure.Proficiency;
 import structure.ProficiencyContainer;
 import util.Dice;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -15,28 +17,32 @@ import java.util.Set;
  */
 public abstract class PlayerClass implements BonusContainer, ProficiencyContainer {
     protected Dice hitDice;
-    protected int level;
-    protected Proficiency[] proficiencies;
+    protected List<Proficiency> proficiencies;
     protected Skill[] skillOptions;
     private Skill[] skillChoices;
+    protected ClassFeature[] classFeatures;
 
     public PlayerClass() {
-        level = 1;
         skillChoices = new Skill[2];
+        proficiencies = new ArrayList<>();
     }
 
     public void addBonuses(Map<Attribute,Integer> map) {
 
     }
 
-    public int getLevel() {
-        return level;
+    private List<ClassFeature> getFeatures(int level) {
+        List<ClassFeature> features = new ArrayList<>();
+        for(ClassFeature classFeature : classFeatures) {
+            if(classFeature.getClassLevel() <= level) {
+                features.add(classFeature);
+            }
+        }
+        return features;
     }
 
     public void addProficiencies(Set<Proficiency> proficiencies) {
-        for(Proficiency proficiency : this.proficiencies) {
-            proficiencies.add(proficiency);
-        }
+        proficiencies.addAll(this.proficiencies);
         for(Skill skill : skillChoices) {
             if(skill != null) {
                 proficiencies.add(skill);

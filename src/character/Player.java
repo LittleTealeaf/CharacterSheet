@@ -1,10 +1,10 @@
 package character;
 
+import classFactory.PlayerClass;
 import structure.Attribute;
 import structure.Bonus;
 import structure.BonusContainer;
 import attributes.*;
-import playerClass.PlayerClass;
 import structure.Proficiency;
 
 import java.util.*;
@@ -14,7 +14,7 @@ public class Player implements BonusContainer {
     private Inventory inventory;
     private List<Bonus> playerBonuses;
     private List<Proficiency> playerProficiencies;
-    private List<PlayerClass> classes;
+    private List<ClassLevel> classes;
     private Set<Proficiency> proficiencies;
 
     private transient Map<Attribute,Integer> bonuses;
@@ -30,7 +30,7 @@ public class Player implements BonusContainer {
 
     public int getTotalLevel() {
         int total = 0;
-        for(PlayerClass c : classes) {
+        for(ClassLevel c : classes) {
             total += c.getLevel();
         }
         return total;
@@ -112,7 +112,7 @@ public class Player implements BonusContainer {
     private void updateProficiencies() {
         proficiencies.clear();
         proficiencies.addAll(playerProficiencies);
-        for(PlayerClass c : classes) {
+        for(ClassLevel c : classes) {
             c.addProficiencies(proficiencies);
         }
     }

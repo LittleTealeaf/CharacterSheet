@@ -1,11 +1,12 @@
 package attributes;
 
+import structure.Attribute;
 import structure.Proficiency;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public enum Weapon implements Proficiency {
+public enum Weapon implements Proficiency, Attribute {
     CLUB(Category.SIMPLE_MELEE),
     DAGGER(Category.SIMPLE_MELEE),
     GREATCLUB(Category.SIMPLE_MELEE),
@@ -58,7 +59,7 @@ public enum Weapon implements Proficiency {
         return "TOOL." + super.toString();
     }
 
-    public List<Weapon> getCategory(Category category) {
+    public static List<Weapon> getCategory(Category category) {
         ArrayList<Weapon> list = new ArrayList<>();
         for(Weapon weapon : values()) {
             if(weapon.category == category) {

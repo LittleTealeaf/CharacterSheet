@@ -3,7 +3,7 @@ package attributes;
 import structure.Proficiency;
 
 public enum Armor implements Proficiency {
-    LIGHT_ARMOR,MEDIUM_ARMOR,SHIELD;
+    LIGHT_ARMOR,MEDIUM_ARMOR,HEAVY_ARMOR,SHIELD;
 
 
     private String string;

@@ -1,4 +1,4 @@
-package playerClass;
+package classFactory;
 
 public abstract class PlayerSubclass {
 
