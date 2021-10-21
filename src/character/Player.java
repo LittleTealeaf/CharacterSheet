@@ -1,6 +1,5 @@
 package character;
 
-import classFactory.PlayerClass;
 import structure.Attribute;
 import structure.Bonus;
 import structure.BonusContainer;
@@ -81,11 +80,11 @@ public class Player implements BonusContainer {
     }
 
     public int getInitiativeBonus() {
-        return getAbilityModifier(Ability.DEXTERITY) + getBonus(Misc.INITIATIVE);
+        return getAbilityModifier(Ability.DEXTERITY) + getBonus(MiscAttributes.INITIATIVE);
     }
 
     public int getArmorClass() {
-        return 10 + Math.max(getBonus(Misc.MAX_DEX_BONUS),getAbilityModifier(Ability.DEXTERITY)) + getBonus(Misc.ARMOR_CLASS);
+        return 10 + Math.max(getBonus(MiscAttributes.MAX_DEX_BONUS), getAbilityModifier(Ability.DEXTERITY)) + getBonus(MiscAttributes.ARMOR_CLASS);
     }
 
     private void updateBonuses() {

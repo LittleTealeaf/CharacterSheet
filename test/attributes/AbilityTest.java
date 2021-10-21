@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AbilityTest {
 
+    private static final String pretext = "ABILITY.";
+
     @Test
     public void testToString() {
         for(Ability ability : Ability.values()) {
@@ -24,10 +26,9 @@ public class AbilityTest {
     }
 
     @Test
-    public void testAttributeToId() {
+    public void testAttributeCasting() {
         for(Attribute attribute : Ability.values()) {
-            assertNotNull(attribute.getID());
-            assertNotEquals("",attribute.getID());
+            assertNotNull(attribute);
         }
     }
 

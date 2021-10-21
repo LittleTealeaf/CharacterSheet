@@ -25,7 +25,7 @@ public class BonusTest {
 
     @Test
     public void testGetValue() {
-        for(int i = 0; i < 1000; i++) {
+        for(int i = 0; i < 100; i++) {
             Bonus bonus = new Bonus(null,i);
             assertEquals(i,bonus.getValue());
         }
@@ -35,7 +35,7 @@ public class BonusTest {
     public void testAddBonusesReference() {
         Attribute attribute = () -> null;
         Map<Attribute,Integer> values = new HashMap<>();
-        for(int i = 0; i < 1000; i++) {
+        for(int i = 0; i < 100; i++) {
             values.clear();
             Bonus bonus = new Bonus(attribute,i);
             bonus.addBonuses(values);
@@ -54,5 +54,18 @@ public class BonusTest {
             bonus.addBonuses(values);
             assertEquals(sum,values.get(attribute));
         }
+    }
+
+    @Test
+    public void testBonusContainer() {
+        Attribute attribute = () -> null;
+        Map<Attribute,Integer> values = new HashMap<>();
+        for(int i = 0; i < 100; i++) {
+            values.clear();
+            BonusContainer bonusContainer = new Bonus(attribute,i);
+            bonusContainer.addBonuses(values);
+            assertEquals(i,values.get(attribute));
+        }
+
     }
 }

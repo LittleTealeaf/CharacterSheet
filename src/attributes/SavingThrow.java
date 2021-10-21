@@ -4,12 +4,16 @@ import structure.Attribute;
 import structure.Proficiency;
 
 public enum SavingThrow implements Attribute, Proficiency {
+
+
     STRENGTH(Ability.STRENGTH),
     DEXTERITY(Ability.DEXTERITY),
     CONSTITUTION(Ability.CONSTITUTION),
     WISDOM(Ability.WISDOM),
     CHARISMA(Ability.CHARISMA),
     INTELLIGENCE(Ability.INTELLIGENCE);
+
+    private static final String id = "SAVING_THROW";
 
     private Ability ability;
     private String string;
@@ -32,6 +36,6 @@ public enum SavingThrow implements Attribute, Proficiency {
     }
 
     public String getID() {
-        return "SAVING_THROW." + super.toString();
+        return id + "." + super.toString();
     }
 }

@@ -2,11 +2,11 @@ package attributes;
 
 import structure.Attribute;
 
-public enum Misc implements Attribute {
+public enum MiscAttributes implements Attribute {
     ARMOR_CLASS,INITIATIVE,MAX_DEX_BONUS;
     private String string;
 
-    Misc() {
+    MiscAttributes() {
         this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_"," ");
     }
 
