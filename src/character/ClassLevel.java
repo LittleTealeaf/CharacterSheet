@@ -29,6 +29,10 @@ public class ClassLevel implements ProficiencyContainer, BonusContainer {
         return level;
     }
 
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
     public PlayerClass getPlayerClass() {
         return playerClass.getPlayerClass();
     }
