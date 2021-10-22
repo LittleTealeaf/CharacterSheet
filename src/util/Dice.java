@@ -2,7 +2,7 @@ package util;
 
 public class Dice {
 
-    int size,count;
+    private int size,count;
 
     public Dice(int count, int size) {
         this.count = count;
@@ -19,5 +19,9 @@ public class Dice {
 
     public int getMaxRoll() {
         return count * size;
+    }
+
+    public int getMinRoll() {
+        return count;
     }
 }

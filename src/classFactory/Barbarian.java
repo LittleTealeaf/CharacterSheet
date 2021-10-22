@@ -1,7 +1,6 @@
 package classFactory;
 
 import attributes.*;
-import openAPI.Class;
 import structure.Attribute;
 import structure.Bonus;
 import util.Dice;
@@ -215,7 +214,7 @@ public class Barbarian extends PlayerClass {
             void initialize() {
                 name = "Primal Champion";
                 classLevel = 20;
-                description = "Your Max Constitution and Strength scores are now 24";
+                description = "You gain +4 Strength and Constitution. Your Max Strength and Constitution scores are now 24";
                 bonuses = new Bonus[] {
                         new Bonus(Ability.CONSTITUTION,4),
                         new Bonus(Ability.STRENGTH,4)
