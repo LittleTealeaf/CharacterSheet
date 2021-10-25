@@ -1,18 +1,25 @@
 package character;
 
+import items.Item;
 import structure.Attribute;
 import structure.BonusContainer;
 
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class Inventory implements BonusContainer {
 
-    public Inventory() {
+    private final Set<Item> items;
 
+    public Inventory() {
+        items = new HashSet<>();
     }
 
     @Override
     public void addBonuses(Map<Attribute, Integer> map) {
-
+        for(Item item : items) {
+            item.addBonuses(map);
+        }
     }
 }

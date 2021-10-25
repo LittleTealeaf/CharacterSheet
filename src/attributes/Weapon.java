@@ -40,7 +40,7 @@ public enum Weapon implements Proficiency, Attribute {
     }
 
     public String getID() {
-        return "TOOL." + super.toString();
+        return "WEAPON." + super.toString();
     }
 
 

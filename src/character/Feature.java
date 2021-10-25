@@ -12,11 +12,11 @@ public class Feature implements BonusContainer {
 
     private Bonus[] bonuses;
 
-    public Feature(String name, String description, String source) {
+    public Feature(String name, String source, String description) {
         this(name, description, source, null);
     }
 
-    public Feature(String name, String description, String source, Bonus[] bonuses) {
+    public Feature(String name, String source,String description, Bonus[] bonuses) {
         this.name = name;
         this.description = description;
         this.source = source;

@@ -8,27 +8,28 @@ import structure.Attribute;
 import structure.Bonus;
 import structure.Proficiency;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Player {
 
+    private String name, player;
+    private int hitPoints, maxHitPoints;
     private final Inventory inventory;
     private final Set<Bonus> playerBonuses;
-    private final Set<ClassLevel> classes;
+    private final Map<PlayerClasses,Integer> classes;
     private final Set<Proficiency> proficiencies;
     private final Set<Feature> features;
-    private transient Map<Attribute, Integer> bonuses;
+    private final Personality personality;
+    private final transient Map<Attribute, Integer> bonuses;
 
     public Player() {
         inventory = new Inventory();
         bonuses = new HashMap<>();
         playerBonuses = new HashSet<>();
-        classes = new HashSet<>();
+        classes = new HashMap<>();
         proficiencies = new HashSet<>();
         features = new HashSet<>();
+        personality = new Personality();
     }
 
     public Inventory getInventory() {
@@ -81,8 +82,8 @@ public class Player {
 
     public int getTotalLevel() {
         int total = 0;
-        for (ClassLevel classLevel : classes) {
-            total += classLevel.level();
+        for(PlayerClasses classOption : classes.keySet()) {
+            total += classes.get(classOption);
         }
         return total;
     }
@@ -115,9 +116,91 @@ public class Player {
         for (Feature feature : features) {
             feature.addBonuses(bonuses);
         }
+        inventory.addBonuses(bonuses);
     }
 
-    public Set<ClassLevel> getClasses() {
+    public Map<PlayerClasses,Integer> getClasses() {
         return classes;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPlayer() {
+        return player;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPlayer(String player) {
+        this.player = player;
+    }
+
+    public void addFeatures(Feature... features) {
+        for(Feature feature : features) {
+            this.features.add(feature);
+        }
+    }
+
+    public void addProficiencies(Proficiency... proficiencies) {
+        for(Proficiency proficiency : proficiencies) {
+            this.proficiencies.add(proficiency);
+        }
+    }
+
+    public void addProficiencies(Set<Proficiency> proficiencies) {
+        this.proficiencies.addAll(proficiencies);
+    }
+
+    public void clearLevels() {
+        classes.clear();
+    }
+
+    public void setClassLevel(PlayerClasses playerClass, int level) {
+        classes.put(playerClass,level);
+    }
+
+    public void setAbilityScores(int[] scores) {
+        Set<Bonus> oldBonuses = new HashSet<>();
+        for(Bonus bonus : playerBonuses) {
+            if(bonus.getSource() == Bonus.Source.ABILITY_SCORE) {
+                oldBonuses.add(bonus);
+            }
+        }
+        for(Bonus bonus : oldBonuses) {
+            playerBonuses.remove(bonus);
+        }
+        for(int i = 0; i < scores.length; i++) {
+            playerBonuses.add(new Bonus(Ability.values()[i], scores[i] - 10, Bonus.Source.ABILITY_SCORE));
+        }
+    }
+
+    public Personality getPersonality() {
+        return personality;
+    }
+
+    public int getHitPoints() {
+        return hitPoints;
+    }
+
+    public int getMaxHitPoints() {
+        return maxHitPoints;
+    }
+
+    public void setHitPoints(int hitPoints) {
+        this.hitPoints = hitPoints;
+    }
+
+    public void setMaxHitPoints(int maxHitPoints) {
+        this.maxHitPoints = maxHitPoints;
+    }
+
+    public void addPlayerBonuses(Bonus... bonuses) {
+        for(Bonus bonus : bonuses) {
+            this.playerBonuses.add(bonus);
+        }
     }
 }

@@ -1,6 +1,8 @@
 package structure;
 
-public interface Attribute {
+import serialization.SerializedEnum;
+
+public interface Attribute extends SerializedEnum {
 
     String getID();
 }

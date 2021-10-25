@@ -48,4 +48,15 @@ public class AbilityTest {
             assertEquals(correct_val, Ability.getModifier(i));
         }
     }
+
+    @Test
+    public void testOrder() {
+        Ability[] abilities = Ability.values();
+        assertEquals(Ability.STRENGTH,abilities[0]);
+        assertEquals(Ability.DEXTERITY,abilities[1]);
+        assertEquals(Ability.CONSTITUTION,abilities[2]);
+        assertEquals(Ability.INTELLIGENCE,abilities[3]);
+        assertEquals(Ability.WISDOM,abilities[4]);
+        assertEquals(Ability.CHARISMA,abilities[5]);
+    }
 }
