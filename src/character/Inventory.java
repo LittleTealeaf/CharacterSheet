@@ -1,7 +1,7 @@
 package character;
 
-import structure.BonusContainer;
 import structure.Attribute;
+import structure.BonusContainer;
 
 import java.util.Map;
 

@@ -2,7 +2,7 @@ package util;
 
 public class Dice {
 
-    private int size,count;
+    private int size, count;
 
     public Dice(int count, int size) {
         this.count = count;
@@ -11,7 +11,7 @@ public class Dice {
 
     public int rollDice() {
         int total = 0;
-        for(int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) {
             total += (int) ((Math.random() * size)) + 1;
         }
         return total;
