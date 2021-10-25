@@ -11,10 +11,10 @@ import java.util.*;
 public class Player implements BonusContainer {
 
     private Inventory inventory;
-    private List<Bonus> playerBonuses;
+    private final List<Bonus> playerBonuses;
     private List<Proficiency> playerProficiencies;
-    private List<ClassLevel> classes;
-    private Set<Proficiency> proficiencies;
+    private final List<ClassLevel> classes;
+    private final Set<Proficiency> proficiencies;
 
     private transient Map<Attribute,Integer> bonuses;
 
@@ -30,7 +30,7 @@ public class Player implements BonusContainer {
     public int getTotalLevel() {
         int total = 0;
         for(ClassLevel c : classes) {
-            total += c.getLevel();
+            total += c.level();
         }
         return total;
     }
@@ -87,32 +87,11 @@ public class Player implements BonusContainer {
         return 10 + Math.max(getBonus(MiscAttributes.MAX_DEX_BONUS), getAbilityModifier(Ability.DEXTERITY)) + getBonus(MiscAttributes.ARMOR_CLASS);
     }
 
-    private void updateBonuses() {
-        bonuses.clear();
-        for(Bonus bonus : playerBonuses) {
-            bonuses.put(bonus.getAttribute(),getBonus(bonus.getAttribute()) + bonus.getValue());
-        }
-        inventory.addBonuses(bonuses);
-    }
-
-    public void update() {
-        updateProficiencies();
-        updateBonuses();
-    }
-
     @Override
     public void addBonuses(Map<Attribute,Integer> map) {
         for(Bonus bonus : playerBonuses) {
             Attribute attribute = bonus.getAttribute();
             map.put(attribute,map.getOrDefault(attribute,0) + bonus.getValue());
-        }
-    }
-
-    private void updateProficiencies() {
-        proficiencies.clear();
-        proficiencies.addAll(playerProficiencies);
-        for(ClassLevel c : classes) {
-            c.addProficiencies(proficiencies);
         }
     }
 }
