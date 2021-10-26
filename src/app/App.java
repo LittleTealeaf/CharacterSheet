@@ -27,6 +27,8 @@ public class App {
         Player player = new Player();
         player.setName("Celeana Ardralan");
         player.setPlayer("Christina Bellanich");
+        player.setHitPoints(32);
+        player.setMaxHitPoints(32);
         player.setClassLevel(PlayerClasses.ROGUE, 5);
         player.setAbilityScores(new int[]{12, 19, 17, 15, 12, 18});
         player.addProficiencies(Skill.ANIMAL_HANDLING, Skill.DECEPTION, Skill.INSIGHT, Skill.PERSUASION, Skill.SLEIGHT_OF_HAND, Skill.STEALTH,
