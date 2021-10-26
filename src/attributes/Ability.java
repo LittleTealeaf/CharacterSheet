@@ -1,6 +1,7 @@
 package attributes;
 
 import structure.Attribute;
+import util.EnumUtil;
 
 public enum Ability implements Attribute {
     STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA;
@@ -8,7 +9,7 @@ public enum Ability implements Attribute {
     private String string;
 
     Ability() {
-        this.string = super.toString().charAt(0) + super.toString().substring(1);
+        this.string = EnumUtil.convertString(super.toString());
     }
 
     public static int getModifier(int score) {

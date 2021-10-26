@@ -2,6 +2,7 @@ package attributes;
 
 import structure.Attribute;
 import structure.Proficiency;
+import util.EnumUtil;
 
 public enum Skill implements Attribute, Proficiency {
     ACROBATICS(Ability.DEXTERITY), ANIMAL_HANDLING(Ability.WISDOM), ARCANA(Ability.INTELLIGENCE), ATHLETICS(Ability.STRENGTH), DECEPTION(
@@ -15,7 +16,7 @@ public enum Skill implements Attribute, Proficiency {
 
     Skill(Ability ability) {
         this.ability = ability;
-        this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_", " ");
+        this.string = EnumUtil.convertString(super.toString());
     }
 
     public Ability getAbility() {

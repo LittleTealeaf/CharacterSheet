@@ -20,6 +20,7 @@ public class App {
         String christinaJson = Serialization.gson.toJson(christina);
         System.out.println(christinaJson);
         Player christinaParsed = Serialization.gson.fromJson(christinaJson,Player.class);
+        System.out.println(christinaParsed.getProficiencies());
 
     }
 

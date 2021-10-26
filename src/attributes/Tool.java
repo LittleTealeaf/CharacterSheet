@@ -1,6 +1,7 @@
 package attributes;
 
 import structure.Proficiency;
+import util.EnumUtil;
 
 public enum Tool implements Proficiency {
     ALCHEMIST_SUPPLIES, BREWERS_SUPPLIES, CALLIGRAPHERS_SUPPLIES, CARPENTERS_TOOLS, CARTOGRAPHERS_TOOLS, COBBLERS_TOOLS, COOKS_UTENSILS,
@@ -11,7 +12,7 @@ public enum Tool implements Proficiency {
     private String string;
 
     Tool() {
-        this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_", " ");
+        this.string = EnumUtil.convertString(super.toString());
     }
 
     public String toString() {

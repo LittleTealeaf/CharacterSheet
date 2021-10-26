@@ -12,7 +12,6 @@ public enum Language implements Proficiency {
         this.string = EnumUtil.convertString(super.toString());
     }
 
-
     public String toString() {
         return string;
     }

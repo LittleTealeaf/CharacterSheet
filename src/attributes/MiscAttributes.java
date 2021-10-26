@@ -1,13 +1,14 @@
 package attributes;
 
 import structure.Attribute;
+import util.EnumUtil;
 
 public enum MiscAttributes implements Attribute {
     ARMOR_CLASS, INITIATIVE, MAX_DEX_BONUS, RUN_SPEED;
     private String string;
 
     MiscAttributes() {
-        this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_", " ");
+        this.string = EnumUtil.convertString(super.toString());
     }
 
     public static int getModifier(int score) {

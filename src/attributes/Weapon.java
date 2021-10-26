@@ -2,6 +2,7 @@ package attributes;
 
 import structure.Attribute;
 import structure.Proficiency;
+import util.EnumUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ public enum Weapon implements Proficiency, Attribute {
 
     Weapon(Category category) {
         this.category = category;
-        this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_", " ");
+        this.string = EnumUtil.convertString(super.toString());
     }
 
     public static List<Weapon> getCategory(Category category) {

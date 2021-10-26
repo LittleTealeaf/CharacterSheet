@@ -24,7 +24,8 @@ public class EnumFactory implements TypeAdapterFactory {
 
     static {
         SerializedEnum[][] enums = new SerializedEnum[][]{
-                Ability.values(), Armor.values(), Language.values(), MiscAttributes.values(), SavingThrow.values(), Skill.values(), Weapon.values()
+                Tool.values(), Ability.values(), Armor.values(), Language.values(), MiscAttributes.values(), SavingThrow.values(), Skill.values(),
+                Weapon.values()
         };
 
         idToConstants = new HashMap<>();

@@ -2,6 +2,7 @@ package attributes;
 
 import structure.Attribute;
 import structure.Proficiency;
+import util.EnumUtil;
 
 public enum SavingThrow implements Attribute, Proficiency {
 
@@ -16,7 +17,7 @@ public enum SavingThrow implements Attribute, Proficiency {
 
     SavingThrow(Ability ability) {
         this.ability = ability;
-        this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_", " ");
+        this.string = EnumUtil.convertString(super.toString());
     }
 
     public Ability getAbility() {

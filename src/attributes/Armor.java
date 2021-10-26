@@ -1,6 +1,7 @@
 package attributes;
 
 import structure.Proficiency;
+import util.EnumUtil;
 
 public enum Armor implements Proficiency {
     LIGHT_ARMOR, MEDIUM_ARMOR, HEAVY_ARMOR, SHIELD;
@@ -9,7 +10,7 @@ public enum Armor implements Proficiency {
     private String string;
 
     Armor() {
-        this.string = (super.toString().charAt(0) + super.toString().substring(1)).replace("_", " ");
+        this.string = EnumUtil.convertString(super.toString());
     }
 
 
