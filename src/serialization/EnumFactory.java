@@ -20,11 +20,10 @@ import java.util.Map;
 public class EnumFactory implements TypeAdapterFactory {
 
 
-    private static final SerializedEnum[][] enums;
     private static final Map<String,SerializedEnum> idToConstants;
 
     static {
-        enums = new SerializedEnum[][]{
+        SerializedEnum[][] enums = new SerializedEnum[][]{
                 Ability.values(), Armor.values(), Language.values(), MiscAttributes.values(), SavingThrow.values(), Skill.values(), Weapon.values()
         };
 
