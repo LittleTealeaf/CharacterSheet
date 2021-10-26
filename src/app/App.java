@@ -3,11 +3,9 @@ package app;
 import attributes.*;
 import character.Feature;
 import character.Player;
-import character.PlayerClasses;
+import character.PlayerClass;
 import serialization.Serialization;
 import structure.Bonus;
-
-import java.util.HashSet;
 
 /**
  * Import data from http://www.dnd5eapi.co/
@@ -29,7 +27,7 @@ public class App {
         player.setPlayer("Christina Bellanich");
         player.setHitPoints(32);
         player.setMaxHitPoints(32);
-        player.setClassLevel(PlayerClasses.ROGUE, 5);
+        player.setClassLevel(PlayerClass.ROGUE, 5);
         player.setAbilityScores(new int[]{12, 19, 17, 15, 12, 18});
         player.addProficiencies(Skill.ANIMAL_HANDLING, Skill.DECEPTION, Skill.INSIGHT, Skill.PERSUASION, Skill.SLEIGHT_OF_HAND, Skill.STEALTH,
                                 SavingThrow.INTELLIGENCE, SavingThrow.DEXTERITY
@@ -63,7 +61,7 @@ public class App {
                            new Feature("Uncanny  Dodge", "Rogue",
                                        "When the attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage to you.")
                           );
-        player.addProficiencies(new HashSet<>(Weapon.getCategory(Weapon.Category.SIMPLE_MELEE)));
+        player.addProficiencies(Weapon.Category.SIMPLE_MELEE);
         player.addProficiencies(Weapon.CROSSBOW_HAND,Weapon.LONGSWORD,Weapon.RAPIER,Weapon.SHORTSWORD,Armor.LIGHT_ARMOR,Language.COMMON,
                                 Language.ELVISH,Tool.THIEVES_TOOLS,Tool.DISGUISE_KIT,Tool.POISONERS_KIT);
         player.addPlayerBonuses(new Bonus(MiscAttributes.RUN_SPEED,30));

@@ -1,9 +1,6 @@
 package character;
 
-import attributes.Ability;
-import attributes.MiscAttributes;
-import attributes.SavingThrow;
-import attributes.Skill;
+import attributes.*;
 import structure.Attribute;
 import structure.Bonus;
 import structure.Proficiency;
@@ -16,7 +13,7 @@ public class Player {
     private int hitPoints, maxHitPoints;
     private final Inventory inventory;
     private final Set<Bonus> playerBonuses;
-    private final Map<PlayerClasses,Integer> classes;
+    private final Map<PlayerClass,Integer> classes;
     private final Set<Proficiency> proficiencies;
     private final Set<Feature> features;
     private final Personality personality;
@@ -82,7 +79,7 @@ public class Player {
 
     public int getTotalLevel() {
         int total = 0;
-        for(PlayerClasses classOption : classes.keySet()) {
+        for(PlayerClass classOption : classes.keySet()) {
             total += classes.get(classOption);
         }
         return total;
@@ -119,7 +116,7 @@ public class Player {
         inventory.addBonuses(bonuses);
     }
 
-    public Map<PlayerClasses,Integer> getClasses() {
+    public Map<PlayerClass,Integer> getClasses() {
         return classes;
     }
 
@@ -154,12 +151,17 @@ public class Player {
     public void addProficiencies(Set<Proficiency> proficiencies) {
         this.proficiencies.addAll(proficiencies);
     }
+    public void addProficiencies(Weapon.Category category) {
+        for(Proficiency proficiency : Weapon.getCategory(category)) {
+            proficiencies.add(proficiency);
+        }
+    }
 
     public void clearLevels() {
         classes.clear();
     }
 
-    public void setClassLevel(PlayerClasses playerClass, int level) {
+    public void setClassLevel(PlayerClass playerClass, int level) {
         classes.put(playerClass,level);
     }
 
