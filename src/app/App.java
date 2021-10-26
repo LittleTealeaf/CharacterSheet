@@ -20,7 +20,7 @@ public class App {
         String christinaJson = Serialization.gson.toJson(christina);
         System.out.println(christinaJson);
         Player christinaParsed = Serialization.gson.fromJson(christinaJson,Player.class);
-        System.out.println(christinaParsed.getProficiencies());
+//        System.out.println(christinaParsed.getProficiencies());
 
     }
 
@@ -66,6 +66,10 @@ public class App {
         player.addProficiencies(Weapon.CROSSBOW_HAND,Weapon.LONGSWORD,Weapon.RAPIER,Weapon.SHORTSWORD,Armor.LIGHT_ARMOR,Language.COMMON,
                                 Language.ELVISH,Tool.THIEVES_TOOLS,Tool.DISGUISE_KIT,Tool.POISONERS_KIT);
         player.addPlayerBonuses(new Bonus(MiscAttributes.RUN_SPEED,30));
+        player.getPersonality().setTraits("Flattery is my preferred trick for getting what I want");
+        player.getPersonality().setIdeals("Independence");
+        player.getPersonality().setBonds("A powerful person killed someone I love. Some day soon, I'll have my revenge");
+        player.getPersonality().setFlaws("I'm convinced that no one could ever fool me the way I fool others.");
         player.updateBonuses();
         return player;
     }
