@@ -9,7 +9,7 @@ import java.util.*;
 
 public class Player {
 
-    private String name, player;
+    private String name, player, race, subRace;
     private int hitPoints, maxHitPoints;
     private final Inventory inventory;
     private final Set<Bonus> playerBonuses;
@@ -205,4 +205,19 @@ public class Player {
             this.playerBonuses.add(bonus);
         }
     }
+
+    public String getRace() {
+        return race;
+    }
+
+    public String getSubRace() {
+        return subRace;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
+    }
+
+    public void setSubRace(String subRace) {this.subRace = subRace;}
+
 }
