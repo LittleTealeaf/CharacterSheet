@@ -11,24 +11,24 @@ public class ArmorTest {
 
     @Test
     public void testToString() {
-        for(Armor armor : Armor.values()) {
+        for (Armor armor : Armor.values()) {
             assertNotNull(armor.toString());
-            assertNotEquals("",armor.toString());
+            assertNotEquals("", armor.toString());
         }
     }
 
     @Test
     public void testGetID() {
-        for(Armor armor : Armor.values()) {
+        for (Armor armor : Armor.values()) {
             assertNotNull(armor.getID());
-            assertNotEquals("",armor.getID());
+            assertNotEquals("", armor.getID());
             assertTrue(armor.getID().contains(pretext));
         }
     }
 
     @Test
     public void testProficiencyCasting() {
-        for(Proficiency proficiency : Armor.values()) {
+        for (Proficiency proficiency : Armor.values()) {
             assertNotNull(proficiency);
         }
     }

@@ -1,7 +1,9 @@
 package structure;
 
-public interface Proficiency {
+import serialization.SerializedEnum;
+
+
+public interface Proficiency extends SerializedEnum {
 
     String getID();
-    String toString();
 }

@@ -1,13 +1,13 @@
-package attributes;
+package spellcasting;
 
 import structure.Attribute;
 import util.EnumUtil;
 
-public enum MiscAttributes implements Attribute {
-    ARMOR_CLASS, INITIATIVE, MAX_DEX_BONUS, RUN_SPEED;
-    private String string;
+public enum SpellSchool implements Attribute {
+    CONJURATION,NECROMANCY,EVOCATION,ABJURATION,TRANSMUTATION,DIVINATION,ENCHANTMENT,ILLUSION;
 
-    MiscAttributes() {
+    private String string;
+    SpellSchool() {
         this.string = EnumUtil.convertString(super.toString());
     }
 
@@ -19,11 +19,7 @@ public enum MiscAttributes implements Attribute {
         return string;
     }
 
-    public String toShort() {
-        return string.substring(0, 3);
-    }
-
     public String getID() {
-        return "MISC." + super.toString();
+        return "SPELL_SCHOOL." + super.toString();
     }
 }
