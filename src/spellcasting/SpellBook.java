@@ -4,12 +4,9 @@ import character.Player;
 import character.PlayerClass;
 import structure.Attribute;
 
+import java.util.List;
+
 public class SpellBook {
-    private transient Player player;
+    private List<Spell> knownSpells;
 
-    //I HAVE NO IDEA HOW THIS IS GOING TO WORK
-
-    public SpellBook(Player player, PlayerClass playerClass) {
-        this.player = player;
-    }
 }
