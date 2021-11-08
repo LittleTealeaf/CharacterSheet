@@ -1,6 +1,5 @@
-package items;
+package old;
 
-import old.PlayerBonuses;
 import structure.Bonus;
 import structure.BonusContainer;
 import structure.Proficiency;

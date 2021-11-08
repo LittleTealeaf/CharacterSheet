@@ -1,6 +1,5 @@
 package old;
 
-import items.Item;
 import structure.BonusContainer;
 
 import java.util.HashSet;

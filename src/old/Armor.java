@@ -1,6 +1,5 @@
-package items;
+package old;
 
-import old.PlayerBonuses;
 import structure.Equippable;
 
 public class Armor extends Item implements Equippable {

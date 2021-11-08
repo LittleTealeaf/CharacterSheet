@@ -1,5 +1,8 @@
 package app;
 
+import character.Player;
+import character.PlayerClass;
+
 /**
  * Import data from http://www.dnd5eapi.co/
  */
@@ -7,8 +10,9 @@ package app;
 public class App {
 
     public static void main(String... args) {
-
-
+        Player player = new Player();
+        player.addClassLevels(PlayerClass.DRUID,5);
+        System.out.println(player.getTotalLevel());
     }
 
 //    private static Player getChristina() {
