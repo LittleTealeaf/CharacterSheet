@@ -37,10 +37,10 @@ public class Feature implements BonusContainer {
 
 
     @Override
-    public void addBonuses(Map<Attribute, Integer> map) {
+    public void addBonuses(PlayerBonuses playerBonuses) {
         if (bonuses != null) {
             for (Bonus bonus : bonuses) {
-                bonus.addBonuses(map);
+                bonus.addBonuses(playerBonuses);
             }
         }
     }

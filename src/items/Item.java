@@ -1,5 +1,6 @@
 package items;
 
+import character.PlayerBonuses;
 import structure.Attribute;
 import structure.Bonus;
 import structure.BonusContainer;
@@ -19,18 +20,26 @@ public class Item implements BonusContainer {
 
     public Item() {
         count = 1;
+        initialize();
     }
 
     public Item(String name) {
         this.name = name;
+        count = 1;
+        initialize();
+    }
+
+    private void initialize() {
+
     }
 
     @Override
-    public void addBonuses(Map<Attribute, Integer> map) {
+    public void addBonuses(PlayerBonuses playerBonuses) {
         if(bonuses != null) {
             for(Bonus bonus : bonuses) {
-                bonus.addBonuses(map);
+                bonus.addBonuses(playerBonuses);
             }
         }
     }
+
 }

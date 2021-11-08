@@ -17,9 +17,9 @@ public class Inventory implements BonusContainer {
     }
 
     @Override
-    public void addBonuses(Map<Attribute, Integer> map) {
+    public void addBonuses(PlayerBonuses playerBonuses) {
         for(Item item : items) {
-            item.addBonuses(map);
+            item.addBonuses(playerBonuses);
         }
     }
 }

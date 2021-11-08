@@ -14,10 +14,15 @@ import structure.Bonus;
 public class App {
 
     public static void main(String... args) {
-        Player christina = getChristina();
-        String christinaJson = Serialization.gson.toJson(christina);
-        System.out.println(christinaJson);
-        Player christinaParsed = Serialization.gson.fromJson(christinaJson,Player.class);
+        Player christina = Examples.getEmily();
+        System.out.println("Abilities");
+        for(Ability ability : Ability.values()) {
+            System.out.println(ability + " " + christina.getAbilityScore(ability) + " " + christina.getAbilityModifier(ability));
+        }
+        System.out.println("\nSkills:");
+        for(Skill skill : Skill.values()) {
+            System.out.println(skill + " " + christina.getSkillBonus(skill));
+        }
 
     }
 

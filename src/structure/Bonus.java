@@ -1,5 +1,7 @@
 package structure;
 
+import character.PlayerBonuses;
+
 import java.util.Map;
 
 public class Bonus implements BonusContainer {
@@ -27,8 +29,8 @@ public class Bonus implements BonusContainer {
     }
 
     @Override
-    public void addBonuses(Map<Attribute, Integer> map) {
-        map.put(attribute, map.getOrDefault(attribute, 0) + value);
+    public void addBonuses(PlayerBonuses playerBonuses) {
+        playerBonuses.addBonus(this);
     }
 
     public Source getSource() {

@@ -17,11 +17,11 @@ public class Player {
     private final Set<Proficiency> proficiencies;
     private final Set<Feature> features;
     private final Personality personality;
-    private final transient Map<Attribute, Integer> bonuses;
+    private final transient PlayerBonuses bonuses;
 
     public Player() {
+        bonuses = new PlayerBonuses(this);
         inventory = new Inventory();
-        bonuses = new HashMap<>();
         playerBonuses = new HashSet<>();
         classes = new HashMap<>();
         proficiencies = new HashSet<>();
@@ -62,7 +62,7 @@ public class Player {
     }
 
     public int getBonus(Attribute attribute) {
-        return bonuses.getOrDefault(attribute, 0);
+        return bonuses.getBonuses(attribute);
     }
 
     public int getAbilityScore(Ability ability) {
@@ -218,6 +218,8 @@ public class Player {
         this.race = race;
     }
 
-    public void setSubRace(String subRace) {this.subRace = subRace;}
+    public void setSubRace(String subRace) {
+        this.subRace = subRace;
+    }
 
 }
