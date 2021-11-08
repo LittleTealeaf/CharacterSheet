@@ -1,8 +1,6 @@
 package structure;
 
-import character.PlayerBonuses;
-
-import java.util.Map;
+import old.PlayerBonuses;
 
 public interface BonusContainer {
 

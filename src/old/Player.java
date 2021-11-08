@@ -1,4 +1,4 @@
-package character;
+package old;
 
 import attributes.*;
 import structure.Attribute;

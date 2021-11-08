@@ -1,12 +1,9 @@
 package items;
 
-import character.PlayerBonuses;
-import structure.Attribute;
+import old.PlayerBonuses;
 import structure.Bonus;
 import structure.BonusContainer;
 import structure.Proficiency;
-
-import java.util.Map;
 
 public class Item implements BonusContainer {
 

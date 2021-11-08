@@ -1,10 +1,7 @@
-package character;
+package old;
 
-import structure.Attribute;
 import structure.Bonus;
 import structure.BonusContainer;
-
-import java.util.Map;
 
 public class Feature implements BonusContainer {
 

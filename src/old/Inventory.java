@@ -1,11 +1,9 @@
-package character;
+package old;
 
 import items.Item;
-import structure.Attribute;
 import structure.BonusContainer;
 
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public class Inventory implements BonusContainer {

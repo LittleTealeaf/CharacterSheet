@@ -1,4 +1,4 @@
-package character;
+package old;
 
 import structure.Attribute;
 import structure.Bonus;
