@@ -1,6 +1,6 @@
 package spellcasting;
 
-import structure.Attribute;
+import character.Attribute;
 import util.EnumUtil;
 
 public enum SpellSchool implements Attribute {

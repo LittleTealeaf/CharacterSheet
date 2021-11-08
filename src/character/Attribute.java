@@ -1,4 +1,4 @@
-package structure;
+package character;
 
 import serialization.SerializedEnum;
 

@@ -1,8 +1,5 @@
 package old;
 
-import structure.Bonus;
-import structure.BonusContainer;
-
 public class Feature implements BonusContainer {
 
     private String name, description, source;

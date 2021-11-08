@@ -1,7 +1,6 @@
 package old;
 
-import structure.Attribute;
-import structure.Bonus;
+import character.Attribute;
 
 import java.util.HashMap;
 import java.util.HashSet;

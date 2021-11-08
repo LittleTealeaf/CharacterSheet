@@ -1,5 +1,9 @@
 package app;
 
+import attributes.SavingThrow;
+import attributes.Skill;
+import character.Player;
+
 public class Examples {
 
 //    public static Player getEmily() {
@@ -18,4 +22,14 @@ public class Examples {
 //
 //        return p;
 //    }
+
+    public static Player genChristina() {
+        Player p = new Player();
+        p.setName("Celeana");
+        p.setPlayerName("Christina Bellanich");
+        p.setAbilityScores(new int[]{12, 19, 17, 15, 12, 18});
+        p.addProficiencies(Skill.ANIMAL_HANDLING, Skill.DECEPTION, Skill.INSIGHT, Skill.PERSUASION,
+                Skill.SLEIGHT_OF_HAND, Skill.STEALTH, SavingThrow.INTELLIGENCE, SavingThrow.DEXTERITY);
+        return p;
+    }
 }

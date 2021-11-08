@@ -1,7 +1,9 @@
 package character;
 
-import structure.Bonus;
-import structure.Proficiency;
+import attributes.Ability;
+import attributes.Skill;
+import bonuses.AttributeBonus;
+import bonuses.AttributeQuery;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -12,7 +14,7 @@ public class Player {
     private String name, playerName;
     private Map<PlayerClass,Integer> classLevels;
     private Set<Proficiency> proficiencies;
-    private Set<Bonus> playerBonuses;
+    private Set<AttributeBonus> playerBonuses;
 
 
     public Player() {
@@ -70,8 +72,10 @@ public class Player {
         return level;
     }
 
-    public void addProficiency(Proficiency proficiency) {
-        proficiencies.add(proficiency);
+    public void addProficiencies(Proficiency... proficiencies) {
+        for(Proficiency proficiency : proficiencies) {
+            this.proficiencies.add(proficiency);
+        }
     }
 
     public void removeProficiency(Proficiency proficiency) {
@@ -88,5 +92,46 @@ public class Player {
 
     public int getProficiencyBonus(Proficiency proficiency) {
         return hasProficiency(proficiency) ? getProficiencyBonus() : 0;
+    }
+
+    public int getBonus(Attribute attribute) {
+        AttributeQuery attributeQuery = new AttributeQuery(attribute);
+        for(AttributeBonus bonus : playerBonuses) {
+            bonus.registerBonuses(attributeQuery);
+        }
+//        add anything else
+        return attributeQuery.getValue();
+    }
+
+    public int getAbilityScore(Ability ability) {
+        return 10 + getBonus(ability);
+    }
+
+    public int getAbilityModifier(Ability ability) {
+        return (getAbilityScore(ability) - 10) / 2;
+    }
+
+    public int getSkillBonus(Skill skill) {
+        return getProficiencyBonus(skill) + getAbilityModifier(skill.getAbility()) + getBonus(skill);
+    }
+
+
+    public void setAbilityScores(int[] abilityScores) {
+        Set<AttributeBonus> removeBonuses = new HashSet<>();
+        for(AttributeBonus bonus : playerBonuses) {
+            if(bonus.getSource() == AttributeBonus.Source.ABILITY_BONUS) {
+                removeBonuses.add(bonus);
+            }
+        }
+        for(AttributeBonus bonus : removeBonuses) {
+            playerBonuses.remove(bonus);
+        }
+        for(int i = 0; i < 6; i++) {
+            playerBonuses.add(new AttributeBonus(Ability.values()[i],abilityScores[i]-10, AttributeBonus.Source.ABILITY_BONUS));
+        }
+    }
+
+    public void setAbilityScores(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+        setAbilityScores(new int[] {strength, dexterity, constitution, intelligence, wisdom, charisma});
     }
 }

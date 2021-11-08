@@ -1,5 +1,7 @@
 package app;
 
+import attributes.Ability;
+import attributes.Skill;
 import character.Player;
 import character.PlayerClass;
 
@@ -10,9 +12,19 @@ import character.PlayerClass;
 public class App {
 
     public static void main(String... args) {
-        Player player = new Player();
-        player.addClassLevels(PlayerClass.DRUID,5);
-        System.out.println(player.getTotalLevel());
+        Player p = Examples.genChristina();
+        printAttributes(p);
+    }
+
+    public static void printAttributes(Player p) {
+        System.out.println("Abilities:");
+        for(Ability ability : Ability.values()) {
+            System.out.println("\t" + ability.toShort() + " " + p.getAbilityScore(ability) + " (" + p.getAbilityModifier(ability) + ")");
+        }
+        System.out.println("\nSkills:");
+        for(Skill skill : Skill.values()) {
+            System.out.println("\t" + skill.toString() + " " + p.getSkillBonus(skill));
+        }
     }
 
 //    private static Player getChristina() {

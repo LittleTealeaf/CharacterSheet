@@ -1,7 +1,7 @@
 package attributes;
 
-import structure.Attribute;
-import structure.Proficiency;
+import character.Attribute;
+import character.Proficiency;
 import util.EnumUtil;
 
 public enum Skill implements Attribute, Proficiency {

@@ -1,7 +1,7 @@
 package attributes;
 
+import character.Attribute;
 import org.junit.Test;
-import structure.Attribute;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

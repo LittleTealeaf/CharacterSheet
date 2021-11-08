@@ -2,9 +2,8 @@ package old;
 
 import attributes.*;
 import character.PlayerClass;
-import structure.Attribute;
-import structure.Bonus;
-import structure.Proficiency;
+import character.Attribute;
+import character.Proficiency;
 
 import java.util.*;
 

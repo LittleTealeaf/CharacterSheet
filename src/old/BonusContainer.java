@@ -1,4 +1,4 @@
-package structure;
+package old;
 
 import old.PlayerBonuses;
 

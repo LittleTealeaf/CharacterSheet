@@ -1,8 +1,6 @@
 package old;
 
-import structure.Bonus;
-import structure.BonusContainer;
-import structure.Proficiency;
+import character.Proficiency;
 
 public class Item implements BonusContainer {
 

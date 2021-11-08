@@ -1,7 +1,5 @@
 package old;
 
-import structure.Equippable;
-
 public class Armor extends Item implements Equippable {
     private boolean equipped;
 

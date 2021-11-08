@@ -1,7 +1,7 @@
 package attributes;
 
+import character.Proficiency;
 import org.junit.Test;
-import structure.Proficiency;
 
 import static org.junit.jupiter.api.Assertions.*;
 
