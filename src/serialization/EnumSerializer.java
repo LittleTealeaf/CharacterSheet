@@ -2,7 +2,6 @@ package serialization;
 
 import attributes.*;
 import com.google.gson.*;
-import structure.Attribute;
 
 import java.lang.reflect.Type;
 

@@ -1,4 +1,4 @@
-package structure;
+package old;
 
 public interface Equippable{
 

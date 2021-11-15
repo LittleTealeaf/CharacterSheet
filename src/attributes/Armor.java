@@ -1,6 +1,6 @@
 package attributes;
 
-import structure.Proficiency;
+import character.Proficiency;
 import util.EnumUtil;
 
 public enum Armor implements Proficiency {

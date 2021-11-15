@@ -1,6 +1,6 @@
 package attributes;
 
-import structure.Attribute;
+import character.Attribute;
 import util.EnumUtil;
 
 public enum MiscAttributes implements Attribute {

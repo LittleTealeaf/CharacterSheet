@@ -1,10 +1,4 @@
-package items;
-
-import character.PlayerBonuses;
-import structure.Attribute;
-import structure.Equippable;
-
-import java.util.Map;
+package old;
 
 public class Armor extends Item implements Equippable {
     private boolean equipped;

@@ -1,10 +1,8 @@
-package structure;
+package old;
 
-import character.PlayerBonuses;
+import character.Attribute;
 
-import java.util.Map;
-
-public class Bonus implements BonusContainer {
+public class Bonus implements Bonusable, BonusContainer {
 
     private Attribute attribute;
     private int value;
@@ -31,6 +29,10 @@ public class Bonus implements BonusContainer {
     @Override
     public void addBonuses(PlayerBonuses playerBonuses) {
         playerBonuses.addBonus(this);
+    }
+
+    public int getBonuses(Attribute attribute) {
+        return attribute == this.attribute ? value : 0;
     }
 
     public Source getSource() {
