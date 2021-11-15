@@ -11,7 +11,11 @@ import java.io.Writer;
 
 /**
  * Converts a player to markdown
+ *
+ *
+ * DEPRECATE THIS
  */
+@Deprecated
 public class MarkdownSheet {
 
     public static String toMarkdown(Player player) {
