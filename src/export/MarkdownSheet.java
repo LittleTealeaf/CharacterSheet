@@ -47,7 +47,7 @@ public class MarkdownSheet {
             writer.write(Integer.toString(player.getAbilityScore(ability)));
             int mod = player.getAbilityModifier(ability);
             writer.write(mod >= 0 ? " (+" : " (-");
-            writer.write(Integer.toString(mod) + ")");
+            writer.write(mod + ")");
         }
         writer.write("|\n");
     }
