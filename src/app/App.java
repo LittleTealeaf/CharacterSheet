@@ -3,7 +3,10 @@ package app;
 import attributes.Ability;
 import attributes.Skill;
 import character.Player;
-import character.PlayerClass;
+import export.MarkdownSheet;
+
+import java.io.File;
+import java.io.FileWriter;
 
 /**
  * Import data from http://www.dnd5eapi.co/
@@ -13,7 +16,13 @@ public class App {
 
     public static void main(String... args) {
         Player p = Examples.genChristina();
-        printAttributes(p);
+        try {
+            File file = new File("testing.md");
+            file.createNewFile();
+            FileWriter fileWriter = new FileWriter(file);
+            MarkdownSheet.writeMarkdown(fileWriter,p);
+            fileWriter.close();
+        } catch(Exception e) {}
     }
 
     public static void printAttributes(Player p) {
