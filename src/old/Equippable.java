@@ -1,5 +1,6 @@
 package old;
 
+@Deprecated
 public interface Equippable{
 
 

@@ -1,5 +1,6 @@
 package old;
 
+@Deprecated
 public class Armor extends Item implements Equippable {
     private boolean equipped;
 

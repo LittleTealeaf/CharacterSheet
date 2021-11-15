@@ -3,6 +3,7 @@ package old;
 import java.util.HashSet;
 import java.util.Set;
 
+@Deprecated
 public class Inventory implements BonusContainer {
 
     private final Set<Item> items;

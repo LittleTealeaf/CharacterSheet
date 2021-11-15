@@ -1,5 +1,6 @@
 package old;
 
+@Deprecated
 public class Personality {
 
     private String traits,ideals,bonds,flaws,backstory;

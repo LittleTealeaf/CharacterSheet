@@ -2,6 +2,7 @@ package old;
 
 import character.Proficiency;
 
+@Deprecated
 public class Item implements BonusContainer {
 
     private Bonus[] bonuses;

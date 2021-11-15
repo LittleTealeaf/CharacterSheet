@@ -7,6 +7,7 @@ import character.Proficiency;
 
 import java.util.*;
 
+@Deprecated
 public class Player {
 
     private String name, player, race, subRace;

@@ -2,6 +2,7 @@ package old;
 
 import character.Attribute;
 
+@Deprecated
 public class Bonus implements Bonusable, BonusContainer {
 
     private Attribute attribute;

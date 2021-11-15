@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Deprecated
 public class PlayerBonuses {
     private Map<Attribute,Integer> values;
     private Set<Bonus> bonuses;

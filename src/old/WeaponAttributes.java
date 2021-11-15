@@ -3,6 +3,7 @@ package old;
 import attributes.Ability;
 import util.Dice;
 
+@Deprecated
 public class WeaponAttributes {
     private int bonus;
     private Dice damageDice;
