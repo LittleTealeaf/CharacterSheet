@@ -12,6 +12,7 @@ import com.google.gson.GsonBuilder;
  */
 public class Serialization {
 
+
     public static final Gson gson;
 
     static {
