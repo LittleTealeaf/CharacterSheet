@@ -1,4 +1,4 @@
-package openAPI;
+package openapi;
 
 /**
  * There isn't much in terms of class
