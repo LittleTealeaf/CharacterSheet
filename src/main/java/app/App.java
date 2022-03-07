@@ -16,13 +16,18 @@ public class App {
 
     public static void main(String... args) {
         Player p = Examples.genChristina();
+        FileWriter fileWriter = null;
         try {
             File file = new File("testing.md");
             file.createNewFile();
-            FileWriter fileWriter = new FileWriter(file);
+            fileWriter = new FileWriter(file);
             MarkdownSheet.writeMarkdown(fileWriter, p);
             fileWriter.close();
         } catch (Exception e) {
+        } finally {
+            try {
+                fileWriter.close();
+            } catch(Exception e) {}
         }
     }
 
