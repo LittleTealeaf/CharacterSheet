@@ -2,7 +2,8 @@ package util;
 
 public class Dice {
 
-    private int size, count;
+    private int size;
+    private int count;
 
     public Dice(int count, int size) {
         this.count = count;

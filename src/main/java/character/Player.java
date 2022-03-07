@@ -11,7 +11,8 @@ import java.util.Map;
 import java.util.Set;
 
 public class Player {
-    private String name, playerName;
+    private String name;
+    private String playerName;
     private Map<PlayerClass,Integer> classLevels;
     private Set<Proficiency> proficiencies;
     private Set<AttributeBonus> playerBonuses;

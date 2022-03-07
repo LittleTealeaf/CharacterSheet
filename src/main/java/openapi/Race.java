@@ -2,8 +2,20 @@ package openapi;
 
 public class Race {
 
-    public String name, slug, desc, asi_desc, age, alignment, size, speed_desc, languages, vision, traits, docuemnt__slug, document__title,
-            document__license_url;
+    public String name;
+    public String slug;
+    public String desc;
+    public String asi_desc;
+    public String age;
+    public String alignment;
+    public String size;
+    public String speed_desc;
+    public String languages;
+    public String vision;
+    public String traits;
+    public String docuemnt__slug;
+    public String document__title;
+    public String document__license_url;
     public AttributeIncrease[] asi;
     public Speed speed;
     Race[] subraces;
