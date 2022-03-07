@@ -11,7 +11,7 @@ public class EnumUtil {
             if (i != 0) {
                 builder.append(" ");
             }
-            builder.append(strs[i].toUpperCase(Locale.getDefault()).substring(0, 1)).append(strs[i].toLowerCase().substring(1));
+            builder.append(strs[i].toUpperCase(Locale.getDefault()).substring(0, 1)).append(strs[i].toLowerCase(Locale.getDefault()).substring(1));
         }
         return builder.toString();
     }
