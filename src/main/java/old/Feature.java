@@ -3,7 +3,9 @@ package old;
 @Deprecated
 public class Feature implements BonusContainer {
 
-    private String name, description, source;
+    private String name;
+    private String description;
+    private String source;
 
     private Bonus[] bonuses;
 
