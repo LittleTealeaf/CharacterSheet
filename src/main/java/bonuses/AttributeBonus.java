@@ -9,7 +9,7 @@ public class AttributeBonus implements BonusContainer {
     private int value;
 
     public AttributeBonus(Attribute attribute, int value) {
-        this(attribute,value,Source.DEFAULT);
+        this(attribute, value, Source.DEFAULT);
     }
 
     public AttributeBonus(Attribute attribute, int value, Source source) {
@@ -48,6 +48,7 @@ public class AttributeBonus implements BonusContainer {
     }
 
     public enum Source {
-        DEFAULT,ABILITY_BONUS;
+        DEFAULT,
+        ABILITY_BONUS;
     }
 }

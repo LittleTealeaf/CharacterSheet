@@ -4,7 +4,10 @@ import character.Attribute;
 import util.EnumUtil;
 
 public enum MiscAttributes implements Attribute {
-    ARMOR_CLASS, INITIATIVE, MAX_DEX_BONUS, RUN_SPEED;
+    ARMOR_CLASS,
+    INITIATIVE,
+    MAX_DEX_BONUS,
+    RUN_SPEED;
     private String string;
 
     MiscAttributes() {

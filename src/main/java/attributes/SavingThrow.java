@@ -6,9 +6,12 @@ import util.EnumUtil;
 
 public enum SavingThrow implements Attribute, Proficiency {
 
-
-    STRENGTH(Ability.STRENGTH), DEXTERITY(Ability.DEXTERITY), CONSTITUTION(Ability.CONSTITUTION), WISDOM(Ability.WISDOM), CHARISMA(
-            Ability.CHARISMA), INTELLIGENCE(Ability.INTELLIGENCE);
+    STRENGTH(Ability.STRENGTH),
+    DEXTERITY(Ability.DEXTERITY),
+    CONSTITUTION(Ability.CONSTITUTION),
+    WISDOM(Ability.WISDOM),
+    CHARISMA(Ability.CHARISMA),
+    INTELLIGENCE(Ability.INTELLIGENCE);
 
     private static final String id = "SAVING_THROW";
 
