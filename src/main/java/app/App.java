@@ -12,7 +12,7 @@ import java.io.FileWriter;
  * Import data from http://www.dnd5eapi.co/
  */
 
-public class App {
+public final class App {
 
     private App() {}
 
