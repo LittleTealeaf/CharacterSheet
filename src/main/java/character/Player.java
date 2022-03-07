@@ -100,7 +100,7 @@ public class Player {
     }
 
     public int getProficiencyBonus() {
-        return ((getTotalLevel() + 3) / 4) + 1;
+        return (getTotalLevel() + 3) / 4 + 1;
     }
 
     public int getAbilityScore(Ability ability) {
