@@ -14,6 +14,8 @@ import java.io.FileWriter;
 
 public class App {
 
+    private App() {}
+
     public static void main(String... args) {
         Player p = Examples.genChristina();
         FileWriter fileWriter = null;
