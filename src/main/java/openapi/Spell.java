@@ -1,4 +1,4 @@
-package openAPI;
+package openapi;
 
 /**
  * Conforms to the api as specified at https://api.open5e.com/spells/

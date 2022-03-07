@@ -1,4 +1,4 @@
-package openAPI;
+package openapi;
 
 public class Race {
 
