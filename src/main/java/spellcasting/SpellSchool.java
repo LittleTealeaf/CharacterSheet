@@ -4,9 +4,17 @@ import character.Attribute;
 import util.EnumUtil;
 
 public enum SpellSchool implements Attribute {
-    CONJURATION,NECROMANCY,EVOCATION,ABJURATION,TRANSMUTATION,DIVINATION,ENCHANTMENT,ILLUSION;
+    CONJURATION,
+    NECROMANCY,
+    EVOCATION,
+    ABJURATION,
+    TRANSMUTATION,
+    DIVINATION,
+    ENCHANTMENT,
+    ILLUSION;
 
     private String string;
+
     SpellSchool() {
         this.string = EnumUtil.convertString(super.toString());
     }

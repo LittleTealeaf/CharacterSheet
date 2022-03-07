@@ -12,11 +12,10 @@ import com.google.gson.GsonBuilder;
  */
 public class Serialization {
 
-
     public static final Gson gson;
 
     static {
-        gson =
-                new GsonBuilder().excludeFieldsWithModifiers(java.lang.reflect.Modifier.TRANSIENT).setPrettyPrinting().registerTypeAdapterFactory(new EnumFactory()).create();
+        gson = new GsonBuilder().excludeFieldsWithModifiers(java.lang.reflect.Modifier.TRANSIENT).setPrettyPrinting().registerTypeAdapterFactory(
+                new EnumFactory()).create();
     }
 }

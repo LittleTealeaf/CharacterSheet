@@ -11,34 +11,37 @@ import com.google.gson.stream.JsonWriter;
 import org.apache.commons.lang3.ClassUtils;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
 public class EnumFactory implements TypeAdapterFactory {
 
-
-    private static final Map<String,SerializedEnum> idToConstants;
+    private static final Map<String, SerializedEnum> idToConstants;
 
     static {
         SerializedEnum[][] enums = new SerializedEnum[][]{
-                Tool.values(), Ability.values(), Armor.values(), Language.values(), MiscAttributes.values(), SavingThrow.values(), Skill.values(),
+                Tool.values(),
+                Ability.values(),
+                Armor.values(),
+                Language.values(),
+                MiscAttributes.values(),
+                SavingThrow.values(),
+                Skill.values(),
                 Weapon.values()
         };
 
         idToConstants = new HashMap<>();
-        for(int i = 0; i < enums.length; i++) {
-            for(int j = 0; j < enums[i].length; j++) {
-                idToConstants.put(enums[i][j].getID(),enums[i][j]);
+        for (int i = 0; i < enums.length; i++) {
+            for (int j = 0; j < enums[i].length; j++) {
+                idToConstants.put(enums[i][j].getID(), enums[i][j]);
             }
         }
     }
 
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
         Class<T> rawType = (Class<T>) type.getRawType();
-        if(!ClassUtils.getAllInterfaces(rawType).contains(SerializedEnum.class)) {
+        if (!ClassUtils.getAllInterfaces(rawType).contains(SerializedEnum.class)) {
             return null;
         }
 

@@ -1,6 +1,7 @@
 package spellcasting;
 
 public abstract class Spell {
+
     protected String castingTime;
     protected String range;
     protected String duration;

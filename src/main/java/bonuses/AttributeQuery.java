@@ -1,10 +1,6 @@
 package bonuses;
 
 import character.Attribute;
-import character.Player;
-
-import java.util.HashSet;
-import java.util.Set;
 
 public class AttributeQuery {
 
@@ -17,7 +13,7 @@ public class AttributeQuery {
     }
 
     public void registerAttributeBonus(AttributeBonus attributeBonus) {
-        if(attributeBonus.getAttribute() == attribute) {
+        if (attributeBonus.getAttribute() == attribute) {
             value += attributeBonus.getValue();
         }
     }

@@ -10,17 +10,18 @@ public class EnumSerializer implements JsonSerializer<SerializedEnum>, JsonDeser
     private static SerializedEnum[][] enums;
 
     static {
-        enums = new SerializedEnum[][] {
-                Ability.values(),Armor.values(),Language.values(),MiscAttributes.values(),SavingThrow.values(),Skill.values(),Weapon.values()
+        enums = new SerializedEnum[][]{
+                Ability.values(), Armor.values(), Language.values(), MiscAttributes.values(), SavingThrow.values(), Skill.values(), Weapon.values()
         };
     }
 
     @Override
-    public SerializedEnum deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
+    public SerializedEnum deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext)
+    throws JsonParseException {
         String string = jsonElement.getAsString();
-        for(SerializedEnum[] enumList : enums) {
-            for(SerializedEnum en : enumList) {
-                if(en.getID().equals(string)) {
+        for (SerializedEnum[] enumList : enums) {
+            for (SerializedEnum en : enumList) {
+                if (en.getID().equals(string)) {
                     return en;
                 }
             }

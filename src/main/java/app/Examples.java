@@ -17,7 +17,8 @@ public class Examples {
 //        p.setSubRace("Moon");
 //        p.setName("Magolna");
 //        p.addFeatures(new Feature("Darkvision","Shifter","Thanks to your elf blood, you have superior vision in dark and dim conditions. You can " +
-//                "see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light. You can\\u0027t discern color" +
+//                "see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light. You can\\u0027t discern
+//                color" +
 //                " in darkness, only shades of gray."));
 //
 //        return p;
@@ -28,8 +29,9 @@ public class Examples {
         p.setName("Celeana");
         p.setPlayerName("Christina Bellanich");
         p.setAbilityScores(new int[]{12, 19, 17, 15, 12, 18});
-        p.addProficiencies(Skill.ANIMAL_HANDLING, Skill.DECEPTION, Skill.INSIGHT, Skill.PERSUASION,
-                Skill.SLEIGHT_OF_HAND, Skill.STEALTH, SavingThrow.INTELLIGENCE, SavingThrow.DEXTERITY);
+        p.addProficiencies(Skill.ANIMAL_HANDLING, Skill.DECEPTION, Skill.INSIGHT, Skill.PERSUASION, Skill.SLEIGHT_OF_HAND, Skill.STEALTH,
+                           SavingThrow.INTELLIGENCE, SavingThrow.DEXTERITY
+                          );
         return p;
     }
 }

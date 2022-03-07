@@ -4,7 +4,12 @@ import character.Attribute;
 import util.EnumUtil;
 
 public enum Ability implements Attribute {
-    STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA;
+    STRENGTH,
+    DEXTERITY,
+    CONSTITUTION,
+    INTELLIGENCE,
+    WISDOM,
+    CHARISMA;
 
     private String string;
 
