@@ -5,8 +5,24 @@ package openapi;
  */
 public class Class {
 
-    public String name, slug, desc, hit_dice, hp_at_1st_level, hp_at_higher_levels, prof_armor, prof_weapons, prof_tools, prof_saving_throws,
-            prof_skills, equipment, table, spellcasting_ability, subtypes_name, document__slug, document__title, document__license_url;
+    public String name;
+    public String slug;
+    public String desc;
+    public String hit_dice;
+    public String hp_at_1st_level;
+    public String hp_at_higher_levels;
+    public String prof_armor;
+    public String prof_weapons;
+    public String prof_tools;
+    public String prof_saving_throws;
+    public String prof_skills;
+    public String equipment;
+    public String table;
+    public String spellcasting_ability;
+    public String subtypes_name;
+    public String document__slug;
+    public String document__title;
+    public String document__license_url;
     public Archetype[] archetypes;
 
     public class Archetype {
