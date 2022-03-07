@@ -27,6 +27,11 @@ public class Class {
 
     public class Archetype {
 
-        public String name, slug, desc, document__slug, document__title, document__license_url;
+        public String name;
+        public String slug;
+        public String desc;
+        public String document__slug;
+        public String document__title;
+        public String document__license_url;
     }
 }
