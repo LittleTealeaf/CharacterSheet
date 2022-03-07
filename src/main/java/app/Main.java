@@ -1,3 +1,5 @@
+package app;
+
 public final class Main {
     private Main() {}
 
