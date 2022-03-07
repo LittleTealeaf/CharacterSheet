@@ -3,7 +3,11 @@ package old;
 @Deprecated
 public class Personality {
 
-    private String traits,ideals,bonds,flaws,backstory;
+    private String traits;
+    private String ideals;
+    private String bonds;
+    private String flaws;
+    private String backstory;
 
 
     public Personality() {
