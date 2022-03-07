@@ -7,7 +7,8 @@ public class Item implements BonusContainer {
 
     private Bonus[] bonuses;
     private int count;
-    private String name, description;
+    private String name;
+    private String description;
     private Proficiency proficiency;
     private WeaponAttributes weaponAttributes;
     private Armor armor;
