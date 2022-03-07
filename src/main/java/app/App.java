@@ -24,10 +24,13 @@ public class App {
             MarkdownSheet.writeMarkdown(fileWriter, p);
             fileWriter.close();
         } catch (Exception e) {
+            e.printStackTrace();
         } finally {
             try {
                 fileWriter.close();
-            } catch(Exception e) {}
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
