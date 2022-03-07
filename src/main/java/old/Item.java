@@ -7,7 +7,6 @@ public class Item implements BonusContainer {
 
     private Bonus[] bonuses;
     private int count;
-    private String name;
     private String description;
     private Proficiency proficiency;
     private WeaponAttributes weaponAttributes;
@@ -20,7 +19,6 @@ public class Item implements BonusContainer {
     }
 
     public Item(String name) {
-        this.name = name;
         count = 1;
         initialize();
     }
