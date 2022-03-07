@@ -10,7 +10,10 @@ import java.util.*;
 @Deprecated
 public class Player {
 
-    private String name, player, race, subRace;
+    private String name;
+    private String player;
+    private String race;
+    private String subRace;
     private int hitPoints, maxHitPoints;
     private final Inventory inventory;
     private final Set<Bonus> playerBonuses;
